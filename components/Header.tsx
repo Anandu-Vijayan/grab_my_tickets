@@ -7,33 +7,18 @@ import SearchBar from "./SearchBar";
 const Header = () => {
   return (
     <div className="border-b bg-white shadow-sm sticky top-0 z-50">
-      <div className="container mx-auto flex flex-wrap items-center justify-between p-4">
-        {/* Logo Section */}
-        <div className="flex items-center justify-between w-full lg:w-auto">
-          <Link href="/" className="font-bold shrink-0">
+      <div className="container mx-auto flex flex-wrap items-center justify-between p-3">
+        {/* Logo Section - Aligned to Left */}
+        <div className="flex items-center justify-start w-auto ">
+          <Link href="/" className="font-bold shrink-0 pr-10">
             <Image
               src="/logo.png" // Ensure the image is placed in the public folder
               alt="logo"
               width={100}
               height={100}
-              className="w-24 lg:w-28 ml-[-38px]"
+              className="w-20 sm:w-24 lg:w-30 object-contain"
             />
           </Link>
-          <div className="lg:hidden flex items-center">
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-            <SignedOut>
-              <SignInButton mode="modal">
-                <button
-                  className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg text-sm border border-gray-300 hover:bg-gray-200 transition"
-                  aria-label="Sign In"
-                >
-                  Sign In
-                </button>
-              </SignInButton>
-            </SignedOut>
-          </div>
         </div>
 
         {/* Search Bar */}
