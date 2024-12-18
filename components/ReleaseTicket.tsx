@@ -26,7 +26,7 @@ const ReleaseTicket = ({
         waitingListId,
       });
     } catch (error) {
-      console.error(error);
+      console.error('Error releasing ticket:',error);
     } finally {
       setIsReleasing(false);
     }
