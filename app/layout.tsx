@@ -4,6 +4,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { ConvexClientProvider } from "@/components/ConvexClientProvider";
 import Header from "@/components/Header";
 import SyncUserWithConvex from "@/components/SyncUserWithConvex";
+import { Toaster } from "@/components/ui/toaster";
 
 
 
@@ -25,6 +26,7 @@ export default function RootLayout({
             <Header />
             <SyncUserWithConvex/>
             {children}
+            <Toaster/>
           </ClerkProvider>
         </ConvexClientProvider>
       </body>
