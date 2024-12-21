@@ -6,12 +6,23 @@ import { useSearchParams } from "next/navigation";
 import EventCard from "@/components/EventCard";
 import { Search } from "lucide-react";
 import Spinner from "@/components/Spinner";
-import { Suspense } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 export default function SearchPage() {
   const searchParams = useSearchParams();
   const query = searchParams.get("q") || "";
-  
+
+  // Use a state to determine if the component is rendered on the client-side
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Update state once the component is mounted on the client side
+  }, []);
+
+  if (!isClient) {
+    return null; // Prevent rendering on the server side
+  }
+
   return (
     <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center"><Spinner /></div>}>
       <SearchResults query={query} />
