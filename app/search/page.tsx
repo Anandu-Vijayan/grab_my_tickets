@@ -9,14 +9,11 @@ import Spinner from "@/components/Spinner";
 import { Suspense, useEffect, useState } from "react";
 
 export default function SearchPage() {
-  const searchParams = useSearchParams();
-  const query = searchParams.get("q") || "";
-
-  // Use a state to determine if the component is rendered on the client-side
   const [isClient, setIsClient] = useState(false);
 
+  // Use useEffect to set state after the component mounts (to enable client-side rendering)
   useEffect(() => {
-    setIsClient(true); // Update state once the component is mounted on the client side
+    setIsClient(true);
   }, []);
 
   if (!isClient) {
@@ -25,9 +22,16 @@ export default function SearchPage() {
 
   return (
     <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center"><Spinner /></div>}>
-      <SearchResults query={query} />
+      <SearchPageContent />
     </Suspense>
   );
+}
+
+function SearchPageContent() {
+  const searchParams = useSearchParams();
+  const query = searchParams.get("q") || "";
+
+  return <SearchResults query={query} />;
 }
 
 function SearchResults({ query }: { query: string }) {
