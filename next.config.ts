@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: "energetic-cuttlefish-696.convex.cloud",
         protocol: "https",
       },
+      {
+        hostname: "fearless-manatee-174.convex.cloud",
+        protocol: "https",
+      },
+
     ],
   },
 };
