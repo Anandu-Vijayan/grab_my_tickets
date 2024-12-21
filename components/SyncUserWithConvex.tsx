@@ -4,7 +4,7 @@ import { api } from "@/convex/_generated/api";
 import { useUser } from "@clerk/nextjs";
 import { useMutation } from "convex/react";
 import { useEffect, useCallback } from "react";
-import {updateUser} from "@/convex/users";
+
 
 const SyncUserWithConvex = ({  }) => {
   const { user } = useUser();

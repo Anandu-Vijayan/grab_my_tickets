@@ -8,7 +8,10 @@ const nextConfig: NextConfig = {
       {
         hostname:"energetic-cuttlefish-696.convex.cloud",
         protocol:"https",
-      }
+      },
+     
+      
+
      
     ]
   }
