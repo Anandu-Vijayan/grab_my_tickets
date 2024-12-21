@@ -17,7 +17,7 @@ export default function SearchBar() {
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      <form onSubmit={handleSearch} className="relative">
+      <form onSubmit={handleSearch} className="relative">  
         <input
           type="text"
           value={query}
