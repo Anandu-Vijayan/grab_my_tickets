@@ -46,16 +46,6 @@ Ticketr is a cutting-edge platform for real-time event ticketing, designed to ma
 - **Clerk Account**
 - **Convex Account**
 
-### Environment Variables
-Create a `.env.local` file with the following:
-```env
-NEXT_PUBLIC_CONVEX_URL=your_convex_url
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key
-CLERK_SECRET_KEY=your_clerk_secret
-STRIPE_SECRET_KEY=your_stripe_secret
-STRIPE_WEBHOOK_SECRET=your_webhook_secret
-NEXT_PUBLIC_APP_URL=http://localhost:3000
-
 
 #📦 Setting Up Third-Party Services
 1.Clerk
@@ -69,6 +59,19 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 
 npm install convex
 npx convex init
+
+
+### Environment Variables
+Create a `.env.local` file with the following:
+```env
+NEXT_PUBLIC_CONVEX_URL=your_convex_url
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_key
+CLERK_SECRET_KEY=your_clerk_secret
+STRIPE_SECRET_KEY=your_stripe_secret
+STRIPE_WEBHOOK_SECRET=your_webhook_secret
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+
 
 
 
