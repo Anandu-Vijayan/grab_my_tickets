@@ -55,3 +55,22 @@ CLERK_SECRET_KEY=your_clerk_secret
 STRIPE_SECRET_KEY=your_stripe_secret
 STRIPE_WEBHOOK_SECRET=your_webhook_secret
 NEXT_PUBLIC_APP_URL=http://localhost:3000
+
+
+#📦 Setting Up Third-Party Services
+1.Clerk
+2.Create a Clerk application here.
+3.Configure authentication providers and redirect URLs.
+4.Add your keys to .env.local.
+5.Convex
+6.Sign up for a Convex account here.
+7.Create a new project and initialize it in your app:
+
+
+npm install convex
+npx convex init
+
+
+
+
+
