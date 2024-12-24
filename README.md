@@ -60,6 +60,19 @@ Ticketr is a cutting-edge platform for real-time event ticketing, designed to ma
 npm install convex
 npx convex init
 
+🏗️ Architecture Overview
+Database Schema
+Events: Event details and ticket quantities
+Tickets: Purchase status and QR codes
+Waiting List: Queue management
+Users: Organizer and attendee profiles
+Key Components
+Real-time queue management
+Automated offer expiration
+Secure payment processing
+Rate limiting for purchases
+
+
 
 ### Environment Variables
 Create a `.env.local` file with the following:
@@ -70,6 +83,10 @@ CLERK_SECRET_KEY=your_clerk_secret
 STRIPE_SECRET_KEY=your_stripe_secret
 STRIPE_WEBHOOK_SECRET=your_webhook_secret
 NEXT_PUBLIC_APP_URL=http://localhost:3000
+stripe listen --forward-to localhost:3000/api/webhooks/stripe
+
+npx shadcn-ui@latest init
+npx shadcn-ui@latest add toast button card dialog toaster
 
 
 
