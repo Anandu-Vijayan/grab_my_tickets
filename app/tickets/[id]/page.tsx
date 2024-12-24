@@ -96,7 +96,7 @@ export default function TicketPage() {
 
         {/* Ticket Component */}
         <Ticket ticketId={ticket._id} />
-
+   
         {/* Additional Information */}
         <div
           className={`mt-8 rounded-lg p-4 ${
@@ -118,8 +118,8 @@ export default function TicketPage() {
             }`}
           >
             {ticket.event.is_cancelled
-              ? "For questions about refunds or cancellations, please contact our support team at team@papareact-tickr.com"
-              : "If you have any issues with your ticket, please contact our support team at team@papareact-tickr.com"}
+              ? "For questions about refunds or cancellations, please contact our support team at team@grab_my_tickets.com"
+              : "If you have any issues with your ticket, please contact our support team at team@grab_my_tickets.com"}
           </p>
         </div>
       </div>
